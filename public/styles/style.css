@@ -67,14 +67,14 @@ body {
   right: 0;
   bottom: 0;
   display: block;
-  background-image: url("/public/background.jpg");
+  /* background-image: url("/public/background.jpg"); */
+  background: linear-gradient(to bottom left, #f7c4ce, #c9d4fd);
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
-  filter: blur(10px);
 }
 .profile-border {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
     padding: 5px;
     /* z-index: 1; */
     position: relative;
@@ -83,7 +83,7 @@ body {
     /* scroll-behavior: smooth;
     scroll-snap-type: y mandatory; */
     /* overflow-x: hidden; */
-    background: linear-gradient(to bottom, #ead7d3, #f4afb3);
+    background: linear-gradient(to bottom, #f8c7ce, #d5ecfa);
     max-height: calc(100% - 100px);
     border-radius: 8px;
     margin: 0 auto;
@@ -94,7 +94,7 @@ body {
   display: flex; 
   flex-direction: column;
   /* overflow-x: hidden; */
-  background: linear-gradient(to bottom, #f7efed, #fbdfe1);
+  background: linear-gradient(to bottom, #fce9ec, #eff7fd);
   width: 600px;
   max-height: calc(100vh - 100px);
   /* color: white; */
@@ -121,8 +121,8 @@ body {
   cursor: not-allowed;
 }
 .avatar {
-  border: 8px solid #f8eaea;
-  background-color: #f8eaea;
+  border: 8px solid #fce9ec;
+  background-color: #fce9ec;
   display: inline-block;
   position: absolute;
   border-radius: 50%;
@@ -140,12 +140,12 @@ body {
   -webkit-transform: translate(50%, 50%);
   transform: translate(50%, 50%);
   position: absolute;
-  background-color: #f8eaea;
+  background-color: #fce9ec;
   bottom: 14.64%;
   right: 14.64%;
   border-radius: 50%;
   /* padding: 8px; */
-  border: 8px solid #f8eaea;
+  border: 8px solid #fce9ec;
 }
 
 .status img {
@@ -175,7 +175,7 @@ body {
 .card {
   /* margin: 24px 16px 16px; */
   margin: 80px 16px 16px;
-  background: linear-gradient(to bottom, #f7efed, #fef3f4);
+  background: linear-gradient(to bottom, #fcf4f5, #f6fafd);
   border-radius: 5px;
   padding-top: -100px;
   /* max-height: 100%; */
