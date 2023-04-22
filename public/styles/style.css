@@ -1,3 +1,10 @@
+
+:root {
+  --top-color: #f8c7ce;
+  --bottom-color: #d5ecfa;
+  --blend-color: #faecef;
+}
+
 a {
   color: #00aff4;
   text-decoration: none;
@@ -83,7 +90,7 @@ body {
     /* scroll-behavior: smooth;
     scroll-snap-type: y mandatory; */
     /* overflow-x: hidden; */
-    background: linear-gradient(to bottom, #f8c7ce, #d5ecfa);
+    background: linear-gradient(to bottom, var(--top-color), var(--bottom-color) );
     max-height: calc(100% - 100px);
     border-radius: 8px;
     margin: 0 auto;
@@ -121,8 +128,8 @@ body {
   cursor: not-allowed;
 }
 .avatar {
-  border: 8px solid #fce9ec;
-  background-color: #fce9ec;
+  border: 8px solid var(--blend-color);
+  background-color: var(--blend-color);
   display: inline-block;
   position: absolute;
   border-radius: 50%;
@@ -140,12 +147,12 @@ body {
   -webkit-transform: translate(50%, 50%);
   transform: translate(50%, 50%);
   position: absolute;
-  background-color: #fce9ec;
+  background-color: var(--blend-color);
   bottom: 14.64%;
   right: 14.64%;
   border-radius: 50%;
   /* padding: 8px; */
-  border: 8px solid #fce9ec;
+  border: 8px solid var(--blend-color);
 }
 
 .status img {
