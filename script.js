@@ -46,5 +46,16 @@ async function fetchDiscordStatus() {
   }
 }
 
+// can't inspect element
+document.addEventListener("keydown", function (e) {
+  if (e.keyCode == 123) {
+    e.preventDefault();
+  }
+});
+
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
+
 fetchDiscordStatus();
 setInterval(fetchDiscordStatus, 1000); // Update status every 1 seconds

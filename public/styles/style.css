@@ -1,8 +1,7 @@
-
 :root {
   --top-color: #f8c7ce;
-  --bottom-color: #d5ecfa;
-  --blend-color: #faecef;
+  --bottom-color: #ec94f9;
+  --blend-color: #fae3ef;
 }
 
 ::-webkit-scrollbar {
@@ -16,7 +15,16 @@
 ::-webkit-scrollbar-thumb {
   background-color: #e7e7ea;
 }
+  /* Disable drag and drop on all elements */
+  * {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
 
+  /* Disable drag and drop on all images */ 
 a {
   color: #00aff4;
   text-decoration: none;
@@ -113,17 +121,13 @@ body {
   display: flex; 
   flex-direction: column;
   /* overflow-x: hidden; */
-  background: linear-gradient(to bottom, #fce9ec, #eff7fd);
+  background: linear-gradient(to bottom, #fce9eb, #f7d4fc);
   width: 600px;
   max-height: calc(100vh - 100px);
   /* color: white; */
   border-radius: 8px;
   margin: 0 auto;
 }
-
-/* .profile::-webkit-scrollbar {
-  display: none;
-} */
 
 .profile .header {
   padding: 16px 16px 12px 16px;
@@ -174,10 +178,10 @@ body {
 }
 
 .badges {
-  padding: 2px 4px;
-  background-color: #fbf4f3;
+  padding: 2px;
+  background-color: #fdf2f5;
   border-radius: 8px;
-  margin-right: 299px;
+  /* margin-right: 299px; */
   /* -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start; */
@@ -185,10 +189,9 @@ body {
   position: absolute;
   top: 219px;
   left: 160px;
-  right: 16px;
 }
 
-.badges * {
+.badges img {
   width: 26px;
   height: 26px;
 }
@@ -196,9 +199,9 @@ body {
 .card {
   /* margin: 24px 16px 16px; */
   margin: 80px 16px 16px;
-  background: linear-gradient(to bottom, #fcf4f5, #f6fafd);
+  background: linear-gradient(to bottom, #fdf1f5, #fbe8fd);
   border-radius: 5px;
-  padding-top: -100px;
+  /* padding-top: -100px; */
   /* max-height: 100%; */
   /* max-height: calc(100vh - 100px); */
   /* overflow-x: hidden; */
@@ -398,9 +401,8 @@ body {
   }
 
   .badges {
-    margin-right: 35px;
-    top: 125px;
-    left: 120px;
+    top: 120px;
+    left: 165px;
   }
 
   .avatar {
@@ -416,18 +418,14 @@ body {
   }
 
   .profile .header {
-    padding: 56px 16px 12px 16px;
+    padding: 10px 16px 12px 16px;
   }
 
   .body {
     padding: 0 16px 16px 16px;
   }
   .card {
-  margin: 24px 16px 16px;
-  background: linear-gradient(to bottom, #f7efed, #fef3f4);
-  border-radius: 5px;
-  padding-top: -100px;
-
+  margin: 75px 16px 16px;
 }
   .username {
   font-size: 20px;
