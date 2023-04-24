@@ -26,7 +26,8 @@ async function fetchDiscordStatus() {
         imagePath = "/public/status/offline.svg";
         break;
       default:
-        imagePath = "";
+        imagePath =
+          "https://cdn.discordapp.com/attachments/1000271433777299588/1100167168273956904/output-onlinepngtools.png";
         break;
     }
 
@@ -66,4 +67,4 @@ document.addEventListener("contextmenu", function (e) {
 });
 
 fetchDiscordStatus();
-setInterval(fetchDiscordStatus, 1000); // Update status every 1 seconds
+setInterval(fetchDiscordStatus, 5000); // Update status every 5 seconds
