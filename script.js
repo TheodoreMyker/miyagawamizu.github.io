@@ -56,14 +56,8 @@ async function fetchDiscordStatus() {
 }
 
 // can't inspect element
-// document.addEventListener("keydown", function (e) {
-//   if (e.keyCode == 123) {
-//     e.preventDefault();
-//   }
-// });
-
 document.addEventListener("keydown", function (e) {
-  if (e.key === "F12" && e.ctrlKey && e.altKey) {
+  if (e.keyCode == 123) {
     e.preventDefault();
   }
 });
