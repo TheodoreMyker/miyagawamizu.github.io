@@ -32,6 +32,13 @@
 			crossorigin />
 		<title>Mizu's Profile</title>
 	</head>
+	<main>
+		<audio id="my-audio" autoplay loop volume="1">
+			<source
+				src="https://cdn.discordapp.com/attachments/978338891193016390/1108188814557585408/spotifydown.com_-_all_I_want_is_you.mp3"
+				type="audio/mp3" />
+		</audio>
+	</main>
 	<body>
 		<div class="container">
 			<div class="profile-border">
@@ -43,16 +50,18 @@
 					</div>
 					<div class="main-header">
 						<div class="image">
-							<div class="avatar" , oncontextmenu="return false;">
-								<img
-									id="avatar-image"
-									alt=""
-									aria-hidden="true"
-									src="https://cdn.discordapp.com/attachments/1000271433777299588/1100167168273956904/output-onlinepngtools.png" />
-								<div class="status">
-									<img id="status-image" src="" alt="" />
+							<button onclick="togglePlay()">
+								<div class="avatar" , oncontextmenu="return false;">
+									<img
+										id="avatar-image"
+										alt=""
+										aria-hidden="true"
+										src="https://cdn.discordapp.com/attachments/1000271433777299588/1100167168273956904/output-onlinepngtools.png" />
+									<div class="status">
+										<img id="status-image" src="" alt="" />
+									</div>
 								</div>
-							</div>
+							</button>
 						</div>
 						<div class="badges">
 							<!-- badges list-->

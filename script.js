@@ -66,5 +66,15 @@ document.addEventListener("contextmenu", function (e) {
 	e.preventDefault();
 });
 
+// Pause and play audio
+var myAudio = document.getElementById("my-audio");
+function togglePlay() {
+	if (myAudio.paused) {
+		myAudio.play();
+	} else {
+		myAudio.pause();
+	}
+}
+
 fetchDiscordStatus();
 setInterval(fetchDiscordStatus, 5000); // Update status every 5 seconds
