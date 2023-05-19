@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Kuru Kuru~" />
+		<meta property="og:title" content="Kuru Kuru~" />
+		<meta property="og:description" content="Kuru Kuru~" />
+		<meta
+			property="og:image"
+			content="https://duiqt.github.io/herta_kuru/img/hertaa1.gif" />
+		<meta property="og:type" content="website" />
+		<!-- <meta property="og:site_name" content="MiyagawaMizu" /> -->
+		<meta property="og:url" content="https://mizu.is-a.dev/kurukuru" />
+		<meta property="twitter:title" content="Kuru Kuru~" />
+		<meta property="twitter:description" content="Kuru Kuru~" />
+		<meta property="twitter:image" content="https://gi" />
+		<meta property="twitter:image:alt" content="Kuru Kuru~" />
+		<meta property="twitter:card" content="summary_large_image" />
+		<link
+			rel="icon"
+			href="https://cdn.discordapp.com/attachments/1100220242778673279/1109203261275250828/1l6nv8bcxx191.ico" />
+		<title>Kuru Kuru~</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				background-color: black;
+				margin: 0;
+				padding: 0;
+				font-family: Arial, sans-serif;
+			}
+
+			.video-container {
+				position: relative;
+				width: 100%;
+				padding-bottom: 50%;
+				/* 16:9 aspect ratio */
+			}
+
+			.video-container video {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			.video-overlay {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
+
+			.kuru-kuru {
+				position: relative;
+				--font-color: #323232;
+				--bg-color: #fff;
+				--main-color: #323232;
+				width: 120px;
+				height: 40px;
+				border-radius: 5px;
+				border: 2px solid var(--main-color);
+				background-color: var(--bg-color);
+				box-shadow: 4px 4px var(--main-color);
+				font-size: 17px;
+				font-weight: 600;
+				color: var(--font-color);
+				cursor: pointer;
+				top: 40%;
+			}
+
+			.kuru-kuru:active {
+				box-shadow: 0px 0px var(--main-color);
+				transform: translate(3px, 3px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="video-container">
+			<video
+				id="videoPlayer"
+				poster="https://duiqt.github.io/herta_kuru/img/hertaa1.gif"
+				preload="auto"
+				loop
+				src="https://cdn.discordapp.com/attachments/1099003436185436201/1109169661611880598/kurukuru.mp4"
+				type="video/mp4">
+				Your browser does not support HTML5 video.
+			</video>
+			<div class="video-overlay">
+				<button id="playPauseButton" class="kuru-kuru">Kuru Kuru~</button>
+			</div>
+		</div>
+		<script>
+			var videoPlayer = document.getElementById("videoPlayer");
+			var playPauseButton = document.getElementById("playPauseButton");
+			var isPlaying = false;
+
+			playPauseButton.onclick = function () {
+				if (isPlaying) {
+					videoPlayer.pause();
+					isPlaying = false;
+					playPauseButton.innerHTML = "Kuru Kuru~";
+				} else {
+					videoPlayer.play();
+					isPlaying = true;
+					playPauseButton.innerHTML = "Kuru Kuru~";
+				}
+			};
+
+			var button = document.getElementById("playPauseButton");
+			button.addEventListener("click", function () {
+				button.style.display = "none";
+			});
+		</script>
+	</body>
+</html>
