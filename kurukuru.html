@@ -161,15 +161,24 @@
 			});
 
 			// disable right click and inspect element on the page to prevent downloading the video and other stuff like that (not 100% secure)
-			document.addEventListener("keydown", function (e) {
-				if (e.keyCode == 123) {
-					e.preventDefault();
-				}
-			});
+			// Disable right-click
+			document.addEventListener("contextmenu", (e) => e.preventDefault());
 
-			document.addEventListener("contextmenu", function (e) {
-				e.preventDefault();
-			});
+			function ctrlShiftKey(e, keyCode) {
+				return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+			}
+
+			document.onkeydown = (e) => {
+				// Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+				if (
+					event.keyCode === 123 ||
+					ctrlShiftKey(e, "I") ||
+					ctrlShiftKey(e, "J") ||
+					ctrlShiftKey(e, "C") ||
+					(e.ctrlKey && e.keyCode === "U".charCodeAt(0))
+				)
+					return false;
+			};
 
 			// rotate device message
 			if (window.innerWidth < window.innerHeight) {
