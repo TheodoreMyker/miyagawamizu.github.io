@@ -160,18 +160,18 @@
 				button.style.display = "none";
 			});
 
-			// disable right click and inspect element
-			// document.addEventListener("keydown", function (e) {
-			// 	if (e.keyCode == 123) {
-			// 		e.preventDefault();
-			// 	}
-			// });
+			// disable right click and inspect element on the page to prevent downloading the video and other stuff like that (not 100% secure)
+			document.addEventListener("keydown", function (e) {
+				if (e.keyCode == 123) {
+					e.preventDefault();
+				}
+			});
 
-			// document.addEventListener("contextmenu", function (e) {
-			// 	e.preventDefault();
-			// });
+			document.addEventListener("contextmenu", function (e) {
+				e.preventDefault();
+			});
 
-			//
+			// rotate device message
 			if (window.innerWidth < window.innerHeight) {
 				alert(
 					"Please rotate your device to landscape mode for the best experience."
