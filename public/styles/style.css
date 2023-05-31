@@ -105,7 +105,10 @@ body {
   right: 0;
   bottom: 0;
   display: block;
-  background-image: url("/public/background.jpg");
+  background-image: url("/public/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   background: linear-gradient(to bottom left, #f7c4ce, #c9d4fd);
   background-size: cover;
   background-repeat: no-repeat;
