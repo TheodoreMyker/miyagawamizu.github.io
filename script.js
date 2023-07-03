@@ -116,4 +116,4 @@ function togglePlay() {
 }
 
 fetchDiscordStatus();
-setInterval(fetchDiscordStatus, 5000); // Update status every 5 seconds
+setInterval(fetchDiscordStatus, 10000); // Update status every 10 seconds
