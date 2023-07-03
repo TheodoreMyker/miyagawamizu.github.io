@@ -1,4 +1,4 @@
-const userID = "738748102311280681"; //put ur discord user id here. // 738748102311280681
+const userID = "738748102311280681"; //put your discord user id here. // 738748102311280681
 const statusImage = document.getElementById("status-image");
 const avatarImage = document.getElementById("avatar-image");
 
@@ -50,8 +50,37 @@ async function fetchDiscordStatus() {
 		if (avatarImage.src.endsWith(".gif")) {
 			avatarImage.src += "?format=png&size=1024";
 		}
+
+		// Cache the images by setting appropriate caching headers
+		const imagePromises = [cacheImage(imagePath), cacheImage(avatarImage.src)];
+		await Promise.all(imagePromises);
 	} catch (error) {
 		console.error("Unable to retrieve Discord status:", error);
+	}
+}
+
+async function cacheImage(imageUrl) {
+	try {
+		const response = await axios.get(imageUrl, {
+			responseType: "blob",
+		});
+		const blob = response.data;
+		const objectURL = URL.createObjectURL(blob);
+
+		// Preload the image by creating an Image object
+		const img = new Image();
+		img.src = objectURL;
+
+		// Release the object URL after the image is loaded
+		return new Promise((resolve, reject) => {
+			img.onload = () => {
+				URL.revokeObjectURL(objectURL);
+				resolve();
+			};
+			img.onerror = reject;
+		});
+	} catch (error) {
+		console.error("Failed to cache image:", error);
 	}
 }
 
@@ -71,8 +100,9 @@ document.onkeydown = (e) => {
 		ctrlShiftKey(e, "J") ||
 		ctrlShiftKey(e, "C") ||
 		(e.ctrlKey && e.keyCode === "U".charCodeAt(0))
-	)
+	) {
 		return false;
+	}
 };
 
 // Pause and play audio

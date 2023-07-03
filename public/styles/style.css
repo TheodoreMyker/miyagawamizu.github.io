@@ -1,7 +1,7 @@
 :root {
-  --top-color: #f8c7ce;
-  --bottom-color: #ec94f9;
-  --blend-color: #fae3ef;
+  --top-color: #dacecd;
+  --bottom-color: #594241;
+  --blend-color: #dcd5d5;
 }
 
 ::-webkit-scrollbar {
@@ -137,7 +137,7 @@ body {
   display: flex;
   flex-direction: column;
   /* overflow-x: hidden; */
-  background: linear-gradient(to bottom, #fce9eb, #f7d4fc);
+  background: linear-gradient(to bottom, #e7e1e1, #bdb3b3);
   width: 600px;
   max-height: calc(100vh - 100px);
   /* color: white; */
@@ -197,7 +197,7 @@ body {
 
 .badges {
   padding: 2px;
-  background-color: #fdf2f5;
+  background-color: #efecec;
   border-radius: 8px;
   /* margin-right: 299px; */
   /* -webkit-box-pack: start;
@@ -217,7 +217,7 @@ body {
 .card {
   /* margin: 24px 16px 16px; */
   margin: 80px 16px 16px;
-  background: linear-gradient(to bottom, #fdf1f5, #fbe8fd);
+  background: linear-gradient(to bottom, #f3f0f0, #dcd7d6);
   border-radius: 5px;
   /* padding-top: -100px; */
   /* max-height: 100%; */
@@ -230,14 +230,6 @@ body {
   color: #060607;
   margin: 0 16px 0px 4.5px;
   font-weight: 700;
-}
-
-.highlight-best-link {
-  color: #64da60;
-}
-
-.highlight-best-link:hover {
-  color: #84fe80;
 }
 
 .text-status {
