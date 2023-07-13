@@ -1,6 +1,6 @@
 const userID = "738748102311280681"; //put your discord user id here. // 738748102311280681
 const statusImage = document.getElementById("status-image");
-const avatarImage = document.getElementById("avatar-image");
+// const avatarImage = document.getElementById("avatar-image");
 
 async function fetchDiscordStatus() {
 	try {
@@ -43,13 +43,13 @@ async function fetchDiscordStatus() {
 		// Update the image.
 		statusImage.src = imagePath;
 		statusImage.alt = `Discord status: ${discord_status}`;
-		avatarImage.src = `https://cdn.discordapp.com/avatars/${discord_user.id}/${discord_user.avatar}`;
-		avatarImage.alt = `Discord avatar: ${discord_user.username}`;
+		// avatarImage.src = `https://cdn.discordapp.com/avatars/${discord_user.id}/${discord_user.avatar}`;
+		// avatarImage.alt = `Discord avatar: ${discord_user.username}`;
 
 		// Check if avatar is a GIF
-		if (avatarImage.src.endsWith(".gif")) {
-			avatarImage.src += "?format=png&size=1024";
-		}
+		// if (avatarImage.src.endsWith(".gif")) {
+		// 	avatarImage.src += "?format=png&size=1024";
+		// }
 
 		// Cache the images by setting appropriate caching headers
 		const imagePromises = [cacheImage(imagePath), cacheImage(avatarImage.src)];
