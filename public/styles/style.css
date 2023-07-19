@@ -360,6 +360,10 @@ body {
   height: 20px;
 }
 
+#link {
+  cursor: url('/public/help.png'), auto;
+}
+
 .connect {
   display: -webkit-box;
   display: -ms-flexbox;
