@@ -1,7 +1,7 @@
 :root {
-  --top-color: #dacecd;
-  --bottom-color: #594241;
-  --blend-color: #dcd5d5;
+  --top-color: #fccae3;
+  --bottom-color: #c4e9ff;
+  --blend-color: #feeaf4;
 }
 
 ::-webkit-scrollbar {
@@ -98,6 +98,19 @@ body {
   height: 100vh;
 }
 
+/* .background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background-image: url("/public/background.png");
+  overflow: hidden;
+  background-size: cover;
+} */
+
 .container::before {
   content: "";
   position: absolute;
@@ -106,14 +119,13 @@ body {
   right: 0;
   bottom: 0;
   display: block;
-  background-image: url("/public/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background: linear-gradient(to bottom left, #f7c4ce, #c9d4fd);
-  background-size: cover;
+  background-image: url("../background.png");
   background-repeat: no-repeat;
   z-index: -1;
+  filter: blur(10px);
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
 }
 
 .profile-border {
@@ -138,7 +150,7 @@ body {
   display: flex;
   flex-direction: column;
   /* overflow-x: hidden; */
-  background: linear-gradient(to bottom, #e7e1e1, #bdb3b3);
+  background: linear-gradient(to bottom, #feeaf4, #e7f6ff);
   width: 600px;
   max-height: calc(100vh - 100px);
   /* color: white; */
@@ -218,7 +230,7 @@ body {
 .card {
   /* margin: 24px 16px 16px; */
   margin: 80px 16px 16px;
-  background: linear-gradient(to bottom, #f3f0f0, #dcd7d6);
+  background: linear-gradient(to bottom, #fdf4fa, #f2faff);
   border-radius: 5px;
   /* padding-top: -100px; */
   /* max-height: 100%; */
