@@ -1,4 +1,4 @@
-## 🌐 Just my pesonal website (Modified version of <a href="https://github.com/Domin-MND/profile-card" target="_blank">this</a>).
+## 🌐 Just my pesonal website (Modified version of [this](https://github.com/Domin-MND/profile-card)).
 ![Preview](https://raw.githubusercontent.com/MiyagawaMizu/miyagawamizu.github.io/main/preview.png)
 
 ## ⚙️ How to use
@@ -9,7 +9,7 @@
 ```js
 const userID = "<discord user id>";
 ```
-> This project is using Landyard API to get user data. So when you change your Discord Status, it will automatically change on your website. like this:
+> This project is using [Landyard API](https://github.com/Phineas/lanyard) to get user data. So when you change your Discord Status, it will automatically change on your website. like this:
 > 
 > <img src="https://raw.githubusercontent.com/MiyagawaMizu/Discord-Status/main/status/online.svg" width="17"></img> - **Online**
 <br>
